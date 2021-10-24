@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>RIO - Rent-it-out</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,500,500i,600,600i,700,700i&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=4WK3vLZkjIPoTQ0VxJYbJoRuwIMs-fKBkpBCVSSExn3FNpwX0at-y7PdH4SLw6ov_tjdSmudJjT46NAHn9w-GqUZOGxj-CrdYvjcMMZGCvo" charset="UTF-8"></script> -->
+
+
+    <style>
+        .overlay_flight_traveldil {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            transition: opacity 500ms;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .overlay_flight_traveldil:target {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .popup_flight_travlDil {
+            margin: 70px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            width: 70%;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            transition: all 2s ease-in-out;
+        }
+
+        .popup_flight_travlDil .close_flight_travelDl {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            transition: all 200ms;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .popup_flight_travlDil .content_flightht_travel_dil {
+            max-height: 30%;
+            overflow: auto;
+        }
+
+        span {
+            cursor: pointer;
+        }
+
+        .number {
+            margin: 100px;
+        }
+
+        .minus,
+        .plus {
+            width: 50px;
+            height: 50px;
+            background: #DDAF49;
+            color: #FFFFFF;
+            border-radius: 4px;
+            padding: 8px 5px 8px 5px;
+            border: 1px solid #ddd;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .input {
+            height: 34px;
+            width: 100px;
+            text-align: center;
+            font-size: 26px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="images/logo_1.png" height="80" width="80">
+                RENT-IT-<span>OUT</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <!-- <li class="nav-item"><a href="rooms.html" class="nav-link">Apartment Room</a></li> -->
+                    <!-- <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-wrap js-fullheight"
+        style="background-image:url(images/fontpage.jpg), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));background-blend-mode: overlay;"
+        data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start"
+                data-scrollax-parent="true">
+                <div class="col-md-7 ftco-animate">
+                    <h2 class="subheading" style="font-size:32px;font-weight:700px!important;">Welcome to RENT-IT-OUT
+                    </h2>
+                    <h3 class="mb-4" style="color:#fff;">Find verified listings of Houses, Vehicles & Household Helpers
+                        at negotiable prices
+                    </h3>
+                    <p><a href="#" class="btn btn-primary">Learn more</a> <a href="#" class="btn btn-white">Contact
+                            us</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="ftco-section ftco-book ftco-no-pt ftco-no-pb">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-lg-4">
+                    <form action="#" class="appointment-form">
+                        <h3 class="mb-3">Book your service</h3>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Full Name">
+                                </div>
+                            </div>
+                            <!-- <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="input-wrap">
+                                        <div class="icon"><span class="ion-md-calendar"></span></div>
+                                        <input type="text" class="form-control appointment_date-check-in" placeholder="Check-In">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="input-wrap">
+                                        <div class="icon"><span class="ion-md-calendar"></span></div>
+                                        <input type="text" class="form-control appointment_date-check-out" placeholder="Check-Out">
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div class="form-field">
+                                        <div class="select-wrap">
+                                            <div class="icon"><span class="fa fa-chevron-down"></span></div>
+                                            <select name="" class="form-control" id="countrySelect"
+                                                onchange="makeSubmenu(this.value)">
+                                                <option value="" selected disabled>Services</option>
+                                                <option value="Home">Home</option>
+                                                <option value="Household">Household Helper</option>
+                                                <option value="Vehicle">Vehicle</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div class="form-field">
+                                        <div class="select-wrap">
+                                            <div class="icon"><span class="fa fa-chevron-down"></span></div>
+                                            <select name="" class="form-control" id="citySelect">
+                                                <option value="" selected disabled>Select</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="form-field">
+                                        <div class="select-wrap">
+                                            <div class="icon"><span class="fa fa-chevron-down"></span></div>
+                                            <select name="" id="" class="form-control">
+                                                <option value="">Children</option>
+                                                <option value="">1</option>
+                                                <option value="">2</option>
+                                                <option value="">3</option>
+                                                <option value="">4</option>
+                                                <option value="">5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Phone number">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Location">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input type="submit" value="Book Service Now" class="btn btn-primary py-3 px-4">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ftco-section ftco-services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 d-flex services align-self-stretch px-4 ftco-animate">
+                    <div class="d-block services-wrap text-center">
+                        <div class="img" style="background-image:url(images/Amazing-House.jpg)"></div>
+                        <div class="media-body py-4 px-3">
+                            <h3 class="heading">Accomodation Services</h3>
+                            <p>Rent out the perfect place for you at affordable rates. Choose from thousands of options
+                                available.<b>
+                                    <center>Book your appartment NOW!</center>
+                                </b>
+                            </p>
+                            <p><a href="#" class="btn btn-primary">Rent NOW</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex services align-self-stretch px-4 ftco-animate">
+                    <div class="d-block services-wrap text-center">
+                        <div class="img" style="background-image:url(images/Maid.jpg)"></div>
+                        <div class="media-body py-4 px-3">
+                            <h3 class="heading">House-hold Help</h3>
+                            <p>Listing of police verified trusted maids and household workers. Negotiate prices and hire
+                                without the fear of
+                                being scammed. <b>
+                                    <center>Hire your help NOW!</center>
+                                </b>
+                            </p>
+                            <p><a href="#" class="btn btn-primary">Hire NOW</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex services align-self-stretch px-4 ftco-animate">
+                    <div class="d-block services-wrap text-center">
+                        <div class="img" style="background-image:url(images/ola_scooter.jpg)"></div>
+                        <div class="media-body py-4 px-3">
+                            <h3 class="heading">Rent Vehicles</h3>
+                            <p>2-Wheelers or 4-Wheelers, rent your required vehicle from here. 100% verified and trusted
+                                sources. <b>
+                                    <center>Rent Vehicle NOW!</center>
+                                </b>
+                            </p>
+                            <p><a href="#" class="btn btn-primary">Book NOW</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ftco-section bg-light">
+        <div class="container-fluid px-md-0">
+            <div class="row no-gutters justify-content-center pb-5 mb-3">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <h2>Accomodation Service</h2>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-lg-6">
+                    <div class="room-wrap d-md-flex">
+                        <a href="#" class="img" style="background-image:url(images/Standard.jpg)"></a>
+                        <div class="half left-arrow d-flex align-items-center">
+                            <div class="text p-4 p-xl-5 text-center">
+                                <p class="star mb-0"><span class="fa fa-star"></span><span
+                                        class="fa fa-star"></span><span class="fa fa-star"></spa n><span
+                                            class="fa fa-star"></span><span class="fa fa-star"></span></p>
+
+                                <h3 class="mb-3"><a href="rooms.html">Standard Room</a></h3>
+                                <ul class="list-accomodation">
+                                    <li><span>Max:</span> 3 Persons</li>
+                                    <li><span>Size:</span> 45 m2</li>
+                                    <li><span>View:</span> Variable</li>
+                                    <li><span>Bed:</span> 2</li>
+                                </ul>
+                                <p class="pt-1"><a href="#popup_flight_travlDil1" class="btn-custom px-3 py-2">View
+                                        Details <span class="icon-long-arrow-right"></span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="room-wrap d-md-flex">
+                        <a href="#" class="img" style="background-image:url(images/flat.jpg)"></a>
+                        <div class="half left-arrow d-flex align-items-center">
+                            <div class="text p-4 p-xl-5 text-center">
+                                <p class="star mb-0"><span class="fa fa-star"></span><span
+                                        class="fa fa-star"></span><span class="fa fa-star"></span><span
+                                        class="fa fa-star"></span><span class="fa fa-star"></span></p>
+
+                                <h3 class="mb-3"><a href="rooms.html">Luxuries Flat</a></h3>
+                                <ul class="list-accomodation">
+                                    <li><span>Max:</span> Variable</li>
+                                    <li><span>Size:</span> 45 m2</li>
+                                    <li><span>View:</span> Sea View</li>
+                                    <li><span>Bed:</span> 1</li>
+                                </ul>
+                                <p class="pt-1"><a href="#" class="btn-custom px-3 py-2">View
+                                        Details <span class="icon-long-arrow-right"></span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="room-wrap d-md-flex">
+                        <a href="#" class="img order-md-last" style="background-image:url(images/FARM_HOUSE.jpg)"></a>
+                        <div class="half right-arrow d-flex align-items-center">
+                            <div class="text p-4 p-xl-5 text-center">
+                                <p class="star mb-0"><span class="fa fa-star"></span><span
+                                        class="fa fa-star"></span><span class="fa fa-star"></span><span
+                                        class="fa fa-star"></span><span class="fa fa-star"></span></p>
+
+                                <h3 class="mb-3"><a href="rooms.html">Farm Houses</a></h3>
+                                <ul class="list-accomodation">
+                                    <li><span>Size:</span> Variable</li>
+                                    <li><span>View:</span> Sea View</li>
+
+                                </ul>
+                                <p class="pt-1"><a href="#popup_flight_travlDil3" class="btn-custom px-3 py-2">View
+                                        Details
+                                        <span class="icon-long-arrow-right"></span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="room-wrap d-md-flex">
+                        <a href="#" class="img order-md-last" style="background-image:url(images/Houses_Villa.jpg)"></a>
+                        <div class="half right-arrow d-flex align-items-center">
+                            <div class="text p-4 p-xl-5 text-center">
+                                <p class="star mb-0"><span class="fa fa-star"></span><span
+                                        class="fa fa-star"></span><span class="fa fa-star"></span><span
+                                        class="fa fa-star"></span><span class="fa fa-star"></span></p>
+
+                                <h3 class="mb-3"><a href="rooms.html">Party Plot</a></h3>
+                                <ul class="list-accomodation">
+                                    <li><span>Max:</span> Depends on Occasion </li>
+                                </ul>
+                                <p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">View
+                                        Details <span class="icon-long-arrow-right"></span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ftco-section bg-light">
+        <div class="container-fluid px-md-0">
+            <div class="row no-gutters justify-content-center pb-5 mb-3">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <h2>House-hold Helper</h2>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-lg-6">
+                    <div class="room-wrap d-md-flex">
+                        <a href="#" class="img" style="background-image:url(images/Baby_sitter_helper.jpg)"></a>
+                        <div class="half left-arrow d-flex align-items-center">
+                            <div class="text p-4 p-xl-5 text-center">
+                                <p class="star mb-0"><span class="fa fa-star"></span><span
+                                        class="fa fa-star"></span><span class="fa fa-star"></span><span
+                                        class="fa fa-star"></span><span class="fa fa-star"></span></p>
+
+                                <h3 class="mb-3"><a href="rooms.html">Baby Sitter</a></h3>
+                                <p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">Know More
+                                        <span class="icon-long-arrow-right"></span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="room-wrap d-md-flex">
+                        <a href="#" class="img" style="background-image:url(images/maid1.jpg)"></a>
+                        <div class="half left-arrow d-flex align-items-center">
+                            <div class="text p-4 p-xl-5 text-center">
+                                <p class="star mb-0"><span class="fa fa-star"></span><span
+                                        class="fa fa-star"></span><span class="fa fa-star"></span><span
+                                        class="fa fa-star"></span><span class="fa fa-star"></span></p>
+
+                                <h3 class="mb-3"><a href="rooms.html">Full Time Maid</a></h3>
+                                <ul class="list-accomodation">
+                                    <li><span>Price:</span> Negotiable</li>
+                                </ul>
+                                <p class="pt-1"><a href="#popup_flight_travlDil2" class="btn-custom px-3 py-2">Know More
+                                        <span class="icon-long-arrow-right"></span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="room-wrap d-md-flex">
+                        <a href="#" class="img order-md-last" style="background-image:url(images/maid2.jpg)"></a>
+                        <div class="half right-arrow d-flex align-items-center">
+                            <div class="text p-4 p-xl-5 text-center">
+                                <p class="star mb-0"><span class="fa fa-star"></span><span
+                                        class="fa fa-star"></span><span class="fa fa-star"></span><span
+                                        class="fa fa-star"></span><span class="fa fa-star"></span></p>
+
+                                <h3 class="mb-3"><a href="rooms.html">Repair Service</a></h3>
+                                <ul class="list-accomodation">
+                                    <li><span>Price:</span> Negotiable</li>
+                                </ul>
+                                <p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">Know More
+                                        <span class="icon-long-arrow-right"></span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="room-wrap d-md-flex">
+                        <a href="#" class="img order-md-last"
+                            style="background-image:url(images/maid_special_work.jpg)"></a>
+                        <div class="half right-arrow d-flex align-items-center">
+                            <div class="text p-4 p-xl-5 text-center">
+                                <p class="star mb-0"><span class="fa fa-star"></span><span
+                                        class="fa fa-star"></span><span class="fa fa-star"></span><span
+                                        class="fa fa-star"></span><span class="fa fa-star"></span></p>
+
+                                <h3 class="mb-3"><a href="rooms.html">One-Time Work</a></h3>
+                                <p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">Know More
+                                        <span class="icon-long-arrow-right"></span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ftco-section bg-light">
+        <div class="container-fluid px-md-0">
+            <div class="row no-gutters justify-content-center pb-5 mb-3">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <h2>Vehicles</h2>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-lg-6">
+                    <div class="room-wrap d-md-flex">
+                        <a href="#" class="img" style="background-image:url(images/ola_scooter1.jpg)"></a>
+                        <div class="half left-arrow d-flex align-items-center">
+                            <div class="text p-4 p-xl-5 text-center">
+                                <p class="star mb-0"><span class="fa fa-star"></span><span
+                                        class="fa fa-star"></span><span class="fa fa-star"></span><span
+                                        class="fa fa-star"></span><span class="fa fa-star"></span></p>
+
+                                <h3 class="mb-3"><a href="rooms.html">Scooter</a></h3>
+                                <ul class="list-accomodation">
+                                </ul>
+                                <p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">Show More
+                                        <span class="icon-long-arrow-right"></span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="room-wrap d-md-flex">
+                        <a href="#" class="img" style="background-image:url(images/bike.jpg)"></a>
+                        <div class="half left-arrow d-flex align-items-center">
+                            <div class="text p-4 p-xl-5 text-center">
+                                <p class="star mb-0"><span class="fa fa-star"></span><span
+                                        class="fa fa-star"></span><span class="fa fa-star"></span><span
+                                        class="fa fa-star"></span><span class="fa fa-star"></span></p>
+
+                                <h3 class="mb-3"><a href="rooms.html">Bike</a></h3>
+                                <ul class="list-accomodation">
+                                </ul>
+                                <p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">Show
+                                        Show <span class="icon-long-arrow-right"></span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="room-wrap d-md-flex">
+                        <a href="#" class="img order-md-last" style="background-image:url(images/Vehicles.jpg)"></a>
+                        <div class="half right-arrow d-flex align-items-center">
+                            <div class="text p-4 p-xl-5 text-center">
+                                <p class="star mb-0"><span class="fa fa-star"></span><span
+                                        class="fa fa-star"></span><span class="fa fa-star"></span><span
+                                        class="fa fa-star"></span><span class="fa fa-star"></span></p>
+
+                                <h3 class="mb-3"><a href="rooms.html">Cars</a></h3>
+                                <ul class="list-accomodation">
+                                </ul>
+                                <p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">Show More
+                                        <span class="icon-long-arrow-right"></span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="room-wrap d-md-flex">
+                        <a href="#" class="img order-md-last" style="background-image:url(images/bus.jpg)"></a>
+                        <div class="half right-arrow d-flex align-items-center">
+                            <div class="text p-4 p-xl-5 text-center">
+                                <p class="star mb-0"><span class="fa fa-star"></span><span
+                                        class="fa fa-star"></span><span class="fa fa-star"></span><span
+                                        class="fa fa-star"></span><span class="fa fa-star"></span></p>
+
+                                <h3 class="mb-3"><a href="rooms.html">Heavy Vehicles</a></h3>
+                                <ul class="list-accomodation">
+                                </ul>
+                                <p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">Show More
+                                        <span class="icon-long-arrow-right"></span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ftco-section testimony-section bg-light">
+        <div class="container">
+            <div class="row justify-content-center pb-5 mb-3">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <h2>Happy Clients &amp; Feedbacks</h2>
+                </div>
+            </div>
+            <div class="row ftco-animate">
+                <div class="col-md-12">
+                    <div class="carousel-testimony owl-carousel">
+                        <div class="item">
+                            <div class="testimony-wrap d-flex">
+                                <div class="user-img" style="background-image:url(images/ravi.jpg)">
+                                </div>
+                                <div class="text pl-4">
+                                    <span class="quote d-flex align-items-center justify-content-center">
+                                        <i class="fa fa-quote-left"></i>
+                                    </span>
+                                    <p>We shifted homes recently and hiring maids from RIO has been a lifesaver.
+                                        We were able to the maids matching our requirements withing no time.
+                                        All thanks to RIO!</p>
+                                    <p class="name">Ravi Desai</p>
+                                    <span class="position">Father</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimony-wrap d-flex">
+                                <div class="user-img" style="background-image:url(images/shilpa.jpg)">
+                                </div>
+                                <div class="text pl-4">
+                                    <span class="quote d-flex align-items-center justify-content-center">
+                                        <i class="fa fa-quote-left"></i>
+                                    </span>
+                                    <p>Running my small bussiness has been tough lately having no personal
+                                        transportation.
+                                        Renting a Van from RIO made everything function so smoothly.
+                                    </p>
+                                    <p class="name">Shilpa Kumari</p>
+                                    <span class="position">Businesswoman</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimony-wrap d-flex">
+                                <div class="user-img" style="background-image:url(images/krina.jpg)">
+                                </div>
+                                <div class="text pl-4">
+                                    <span class="quote d-flex align-items-center justify-content-center">
+                                        <i class="fa fa-quote-left"></i>
+                                    </span>
+                                    <p>Being a housewife, a mother and working a full time job had been such a load.
+                                        I hired a babysitter from the Website and I'm so happy that I trusted their
+                                        service.
+                                    </p>
+                                    <p class="name">Krina Patel</p>
+                                    <span class="position">Mother</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimony-wrap d-flex">
+                                <div class="user-img" style="background-image:url(images/karan.jpg)">
+                                </div>
+                                <div class="text pl-4">
+                                    <span class="quote d-flex align-items-center justify-content-center">
+                                        <i class="fa fa-quote-left"></i>
+                                    </span>
+                                    <p>I recently had to move to a new city for my education. Finding a PG with the
+                                        basic necessites at affordable rates
+                                        was really a hectic task. I couldn't locate such rooms and PGs. With the help of
+                                        RIO, it was much easier and efficient.
+
+                                    </p>
+                                    <p class="name">Karan Shukla</p>
+                                    <span class="position">Student</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimony-wrap d-flex">
+                                <div class="user-img" style="background-image:url(images/Shreya.jpg)">
+                                </div>
+                                <div class="text pl-4">
+                                    <span class="quote d-flex align-items-center justify-content-center">
+                                        <i class="fa fa-quote-left"></i>
+                                    </span>
+                                    <p>I work at a call center and travelling daily made me feel unsafe. It was a relief
+                                        renting a 2-wheeler from RIO.
+                                        Now I can travel anywhere at such an affordable price.
+                                    </p>
+                                    <p class="name">Shreya Tripathi</p>
+                                    <span class="position">Working Woman</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <section class="ftco-section bg-light">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-md-6 wrap-about">
+                    <div class="img img-2 mb-4" style="background-image:url(images/feature.png)">
+                    </div>
+                    <h2>The most recommended RENTAL SERVICE</h2>
+                    <p>Rent out your necessites at affordable rates. 100% trusted and secure service provider.</p>
+                </div>
+                <div class="col-md-6 wrap-about ftco-animate">
+                    <div class="heading-section">
+                        <div class="pl-md-5">
+                            <h2 class="mb-2">FEATURES</h2>
+                        </div>
+                    </div>
+                    <div class="pl-md-5">
+                        <p>Uniques features offered:</p>
+                        <div class="row">
+                            <div class="services-2 col-lg-6 d-flex w-100">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-comments-dollar" style="font-size:24px;color: #fff"></i>
+                                </div>
+                                <div class="media-body pl-3">
+                                    <h3 class="heading">Bargaining System using AI</h3>
+                                    <p>Negotiate with our Online Bargaining System to get best deals.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="services-2 col-lg-6 d-flex w-100">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-user-shield" style="font-size:24px;color: #fff"></i>
+                                    
+                                </div>
+                                <div class="media-body pl-3">
+                                    <h3 class="heading">Police Verified Maids</h3>
+                                    <p>Household workers provided are crossed verified by Police, such that they have no
+                                        criminal history.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="services-2 col-lg-6 d-flex w-100">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-search-location" style="font-size:24px;color: #fff"></i>
+                                </div>
+                                <div class="media-body pl-3">
+                                    <h3 class="heading">Locality</h3>
+                                    <p>Get to know the surroundings before renting your house.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="services-2 col-lg-6 d-flex w-100">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-filter" style="font-size:24px;color: #fff"></i>
+                                </div>
+                                <div class="media-body pl-3">
+                                    <h3 class="heading">Choices</h3>
+                                    <p>Choose from thousands of available options.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="services-2 col-lg-6 d-flex w-100">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-user-check" style="font-size:24px;color: #fff"></i>
+                                </div>
+                                <div class="media-body pl-3">
+                                    <h3 class="heading">Trusted Sources</h3>
+                                    <p>All listings on our website are 100% verified.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="services-2 col-lg-6 d-flex w-100">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-vr-cardboard" style="font-size:24px;color: #fff"></i>
+                                </div>
+                                <div class="media-body pl-3">
+                                    <h3 class="heading">VR</h3>
+                                    <p>Walk through the houses for youself before renting. T&C Applied*
+                                    </p>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="ftco-intro" style="background-image:url(images/Baby_sitter_helper.jpg);margin-bottom:30px;"
+        data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-9 text-center">
+                    <h2>Make Your Life Easier Now</h2>
+                    <p class="mb-4">It’s safe to book online with us! Get your dream stay in clicks or drop us a line
+                        with your questions.</p>
+                    <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Book now</a> <a href="#"
+                            class="btn btn-white px-4 py-3">Contact us</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="ftco-section bg-light">
+        <div class="container">
+            <div class="row justify-content-center pb-5 mb-3">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <h2>Latest news from our blog</h2>
+                    <span class="subheading">News &amp; Blog</span>
+                </div>
+            </div>
+            <div class="row d-flex">
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry align-self-stretch">
+                        <a href="blog-single.html" class="block-20 rounded"
+                            style="background-image:url(images/ximage_1.jpg.pagespeed.ic.wLesR67oaD.webp)">
+                        </a>
+                        <div class="text p-4 text-center">
+                            <h3 class="heading"><a href="#">Work Hard, Party Hard in a Luxury Chalet in the Alps</a>
+                            </h3>
+                            <div class="meta mb-2">
+                                <div><a href="#">January 30, 2020</a></div>
+                                <div><a href="#">Admin</a></div>
+                                <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+                            </div>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry align-self-stretch">
+                        <a href="blog-single.html" class="block-20 rounded"
+                            style="background-image:url(images/ximage_2.jpg.pagespeed.ic.18-oPZpW0L.webp)">
+                        </a>
+                        <div class="text p-4 text-center">
+                            <h3 class="heading"><a href="#">Work Hard, Party Hard in a Luxury Chalet in the Alps</a>
+                            </h3>
+                            <div class="meta mb-2">
+                                <div><a href="#">January 30, 2020</a></div>
+                                <div><a href="#">Admin</a></div>
+                                <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+                            </div>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry align-self-stretch">
+                        <a href="blog-single.html" class="block-20 rounded"
+                            style="background-image:url(images/ximage_3.jpg.pagespeed.ic.VtT56JPDxi.webp)">
+                        </a>
+                        <div class="text p-4 text-center">
+                            <h3 class="heading"><a href="#">Work Hard, Party Hard in a Luxury Chalet in the Alps</a>
+                            </h3>
+                            <div class="meta mb-2">
+                                <div><a href="#">January 30, 2020</a></div>
+                                <div><a href="#">Admin</a></div>
+                                <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+                            </div>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-md-0 mb-4">
+                    <h2 class="footer-heading"><a href="#" class="logo">RIO - ALL SERVICES UNDER ONE ROOF</a></h2>
+                    <p style="text-align:justify;">Our initiative RIO, provides verified and trusted listings of household helpers, transportation services and accommodation services. Users will be able to choose from thousands of available options at an affordable price.</p>
+                    <a href="#">Read more <span class="fa fa-chevron-right" style="font-size: 11px;"></span></a>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-md-0 mb-4">
+                    <h2 class="footer-heading">Services</h2>
+                    <ul class="list-unstyled">
+                        <!-- <li><a href="#" class="py-1 d-block">Map Direction</a></li> -->
+                        <li><a href="#" class="py-1 d-block">Accomodation Services</a></li>
+                        <li><a href="#" class="py-1 d-block">Household Helper</a></li>
+                        <li><a href="#" class="py-1 d-block">Transportation Service</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="col-md-6 col-lg-3 mb-md-0 mb-4">
+                    <h2 class="footer-heading">Tag cloud</h2>
+                    <div class="tagcloud">
+                        <a href="#" class="tag-cloud-link">apartment</a>
+                        <a href="#" class="tag-cloud-link">home</a>
+                        <a href="#" class="tag-cloud-link">vacation</a>
+                        <a href="#" class="tag-cloud-link">rental</a>
+                        <a href="#" class="tag-cloud-link">rent</a>
+                        <a href="#" class="tag-cloud-link">house</a>
+                        <a href="#" class="tag-cloud-link">place</a>
+                        <a href="#" class="tag-cloud-link">drinks</a>
+                    </div>
+                </div> -->
+                <div class="col-md-6 col-lg-4 mb-md-0 mb-4">
+                    <h2 class="footer-heading">Subcribe</h2>
+                    <form action="#" class="subscribe-form">
+                        <div class="form-group d-flex">
+                            <input type="text" class="form-control rounded-left" placeholder="Enter email address">
+                            <button type="submit" class="form-control submit rounded-right"><span
+                                    class="sr-only">Submit</span><i class="fa fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                    <h2 class="footer-heading mt-5">Follow us</h2>
+                    <ul class="ftco-footer-social p-0">
+                        <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top"
+                                title="Twitter"><span><i class="fab fa-twitter"></i></span></a></li>
+                        <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top"
+                                title="Facebook"><span><i class="fab fa-facebook-f"></i></span></a></li>
+                        <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top"
+                                title="Instagram"><span><i class="fab fa-instagram"></i></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="w-100 mt-5 border-top py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-8">
+                        <p class="copyright mb-0">
+                            START-O-THON &copy;
+                            <script data-cfasync="false"
+                                src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> made by <i class="fa fa-heart" aria-hidden="true"></i><a
+                                href="" target="_blank"> The Titans</a>
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-lg-4 text-md-right">
+                        <p class="mb-0 list-unstyled">
+                            <a class="mr-md-3" href="#">Terms</a>
+                            <a class="mr-md-3" href="#">Privacy</a>
+                            <a class="mr-md-3" href="#">Compliances</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="popup_flight_travlDil1" class="overlay_flight_traveldil">
+        <div class="popup_flight_travlDil">
+            <h2>360 VR View</h2>
+            <a class="close_flight_travelDl" href="#">&times;</a>
+            <div class="content_flightht_travel_dil">
+                <iframe width="700" height="450" src="https://www.youtube.com/embed/u9QIJZsYpow"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div id="popup_flight_travlDil2" class="overlay_flight_traveldil">
+        <div class="popup_flight_travlDil">
+            <h2>Bargain</h2>
+            <a class="close_flight_travelDl" href="#">&times;</a>
+            <div class="content_flightht_travel_dil">
+                <a href="#" class="img" style="background-image:url(images/maid1.jpg)"></a>
+                <h3 class="mb-3"><a href="">Full Time Maid</a></h3>
+                <div class="number">
+                    <span class="minus">-</span>
+                    <input type="text" class="input" value="100" />
+                    <span class="plus">+</span><br/><br/>
+                    <p><a href="#" class="btn btn-primary">OK</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popup_flight_travlDil3" class="overlay_flight_traveldil">
+        <div class="popup_flight_travlDil">
+            <h2>360 VR View</h2>
+            <a class="close_flight_travelDl" href="#">&times;</a>
+            <div class="content_flightht_travel_dil">
+                <iframe width="700" height="450" src="https://www.youtube.com/embed/aeMqimXj8T0"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" />
+        </svg></div>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        var citiesByState = {
+            Home: ["Flat", "Row House", "PGs", "Hostel", "Farm House", "Party Plot"],
+            Household: ["Baby Sitter", "Full-time Maid", "One Time Service"],
+            Vehicle: ["2-Wheeler", "4-Wheeler", "Bicycle"],
+        }
+        function makeSubmenu(value) {
+            if (value.length == 0) document.getElementById("citySelect").innerHTML = "<option></option>";
+            else {
+                var citiesOptions = "";
+                for (cityId in citiesByState[value]) {
+                    citiesOptions += "<option>" + citiesByState[value][cityId] + "</option>";
+                }
+                document.getElementById("citySelect").innerHTML = citiesOptions;
+            }
+        }
+    </script>
+    <script src="js/jquery-migrate-3.0.1.min.js+popper.min.js+bootstrap.min.js.pagespeed.jc.ig_G-0Yue4.js"></script>
+    <script>
+        eval(mod_pagespeed_0ZcRlejUol);
+    </script>
+    <script>
+        eval(mod_pagespeed_qI1X$cF9Q5);
+    </script>
+    <script>
+        eval(mod_pagespeed_JfLKha9JcJ);
+    </script>
+    <script
+        src="js/jquery.easing.1.3.js+jquery.waypoints.min.js+jquery.stellar.min.js+jquery.animateNumber.min.js+bootstrap-datepicker.js.pagespeed.jc.Mn7e5lndoz.js"></script>
+    <script>
+        eval(mod_pagespeed_46j08m1h18);
+    </script>
+    <script>
+        eval(mod_pagespeed_Wpbj1t$kts);
+    </script>
+    <script>
+        eval(mod_pagespeed_Js2MFxMuU4);
+    </script>
+    <script>
+        eval(mod_pagespeed_m5_BZcomTQ);
+    </script>
+    <script>
+        eval(mod_pagespeed__YWqT5J4aQ);
+    </script>
+    <script
+        src="js/jquery.timepicker.min.js+owl.carousel.min.js+jquery.magnific-popup.min.js+scrollax.min.js+google-map.js.pagespeed.jc.zGpSlx5rUj.js"></script>
+    <script>
+        eval(mod_pagespeed_G5EFe_UAvh);
+    </script>
+    <script>
+        eval(mod_pagespeed_94g8tSFBqq);
+    </script>
+    <script>
+        eval(mod_pagespeed_3uDz9NFP_g);
+    </script>
+    <script>
+        eval(mod_pagespeed_IswIumN9bW);
+    </script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script>
+        eval(mod_pagespeed_T_5Z2mDmON);
+    </script>
+    <script src="js/main.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        $(document).ready(function () {
+            $('.minus').click(function () {
+                var $input = $(this).parent().find('input');
+                var count = parseInt($input.val()) - 100;
+                count = count < 1 ? 1 : count;
+                $input.val(count);
+                $input.change();
+                return false;
+            });
+            $('.plus').click(function () {
+                var $input = $(this).parent().find('input');
+                $input.val(parseInt($input.val()) + 100);
+                $input.change();
+                return false;
+            });
+        });
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"rayId":"6a21e51981d631be","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.10.0","si":100}'></script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"rayId":"6a21e5196ca531be","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.10.0","si":100}'></script>
+</body>
+
+</html>

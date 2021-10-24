@@ -1,0 +1,103 @@
+    <section class="ftco-section testimony-section bg-light">
+        <div class="container">
+            <div class="row justify-content-center pb-5 mb-3">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <h2>Happy Clients &amp; Feedbacks</h2>
+                </div>
+            </div>
+            <div class="row ftco-animate">
+                <div class="col-md-12">
+                    <div class="carousel-testimony owl-carousel">
+                        <div class="item">
+                            <div class="testimony-wrap d-flex">
+                                <div class="user-img"
+                                    style="background-image:url(images/ravi.jpg)">
+                                </div>
+                                <div class="text pl-4">
+                                    <span class="quote d-flex align-items-center justify-content-center">
+                                        <i class="fa fa-quote-left"></i>
+                                    </span>
+                                    <p>We shifted homes recently and hiring maids from RIO has been a lifesaver. 
+                                        We were able to the maids matching our requirements withing no time.
+                                         All thanks to RIO!</p>
+                                    <p class="name">Ravi Desai</p>
+                                    <span class="position">Father</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimony-wrap d-flex">
+                                <div class="user-img"
+                                    style="background-image:url(images/shilpa.jpg)">
+                                </div>
+                                <div class="text pl-4">
+                                    <span class="quote d-flex align-items-center justify-content-center">
+                                        <i class="fa fa-quote-left"></i>
+                                    </span>
+                                    <p>Running my small bussiness has been tough lately having no personal transportation.
+                                        Renting a Van from RIO made everything function so smoothly.
+                                    </p>
+                                    <p class="name">Shilpa Kumari</p>
+                                    <span class="position">Businesswoman</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimony-wrap d-flex">
+                                <div class="user-img"
+                                    style="background-image:url(images/krina.jpg)">
+                                </div>
+                                <div class="text pl-4">
+                                    <span class="quote d-flex align-items-center justify-content-center">
+                                        <i class="fa fa-quote-left"></i>
+                                    </span>
+                                    <p>Being a housewife, a mother and working a full time job had been such a load.
+                                        I hired a babysitter from the Website and I'm so happy that I trusted their service.
+                                    </p>
+                                    <p class="name">Krina Patel</p>
+                                    <span class="position">Mother</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimony-wrap d-flex">
+                                <div class="user-img"
+                                    style="background-image:url(images/karan.jpg)">
+                                </div>
+                                <div class="text pl-4">
+                                    <span class="quote d-flex align-items-center justify-content-center">
+                                        <i class="fa fa-quote-left"></i>
+                                    </span>
+                                    <p>I recently had to move to a new city for my education. Finding a PG with the basic necessites at affordable rates
+                                        was really a hectic task. I couldn't locate such rooms and PGs. With the help of RIO, it was much easier and efficient.
+
+                                    </p>
+                                    <p class="name">Karan Shukla</p>
+                                    <span class="position">Student</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimony-wrap d-flex">
+                                <div class="user-img"
+                                    style="background-image:url(images/Shreya.jpg)">
+                                </div>
+                                <div class="text pl-4">
+                                    <span class="quote d-flex align-items-center justify-content-center">
+                                        <i class="fa fa-quote-left"></i>
+                                    </span>
+                                    <p>I work at a call center and travelling daily made me feel unsafe. It was a relief renting a 2-wheeler from RIO.
+                                        Now I can travel anywhere at such an affordable price.   
+                                    </p>
+                                    <p class="name">Shreya Tripathi</p>
+                                    <span class="position">Working Woman</span>
+                                </div>
+                            </div>
+                        </div>                                     
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
