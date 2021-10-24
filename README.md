@@ -39,7 +39,9 @@ Rent-It-Out is an initiative to provide the users with the verified listing of h
    - Household workers provided are crossed verified by Police, such that they have no criminal history.
 
 #Proof of work(Screenshorts):
+
+![logo_2](https://user-images.githubusercontent.com/88734106/138606567-5deb1785-c0fa-41c2-9c96-d5a13373c2c7.png)
 ![Screenshot (3)](https://user-images.githubusercontent.com/88734106/138606576-bb1853ba-b27c-40c3-aff5-7bcb03650ba7.png)
 ![Screenshot (5)](https://user-images.githubusercontent.com/88734106/138606800-9e0c1ea3-95cc-4b67-b861-be57c627f817.png)
 ![Screenshot (4)](https://user-images.githubusercontent.com/88734106/138606583-2ae5de12-e216-4af8-a4af-a876dc074fcc.png)
-![logo_2](https://user-images.githubusercontent.com/88734106/138606567-5deb1785-c0fa-41c2-9c96-d5a13373c2c7.png)
+
