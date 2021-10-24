@@ -2,10 +2,10 @@
 
 Team Members:
 
-Vama Soni
-Rutik Vasani
-Kathan Sukala
-Devarshi Doshi
+1) Vama Soni
+2) Rutik Vasani
+3) Kathan Sukala
+4) Devarshi Doshi
 
 Proof of work(Screenshorts):
 ![Screenshot (3)](https://user-images.githubusercontent.com/88734106/138606576-bb1853ba-b27c-40c3-aff5-7bcb03650ba7.png)
